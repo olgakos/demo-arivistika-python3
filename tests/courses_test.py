@@ -1,7 +1,6 @@
 import allure
 from allure_commons.types import Severity
 from selene import browser
-from selene.support.shared import browser
 
 from models.courses_page import CoursePageMethods
 

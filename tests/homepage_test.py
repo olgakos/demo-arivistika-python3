@@ -21,7 +21,6 @@ def test_homepage_texts():
     school_title2 = "Тест на профориентацию"
 
     with allure.step("Открыть страницу"):
-        # browser.open('https://arivistika.ru/')
         browser.open('/')
     with allure.step("Проверить текст: название Школы"):
         home.check_title(school_name)
