@@ -1,12 +1,12 @@
-import os #to remote only!
-from selenium import webdriver #to remote only!
-from selenium.webdriver.chrome.options import Options #to remote only!
+import os
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selene import Browser, Config #для локального запуска #to remote only!
-# from selene.support.shared import browser #to remote only!
 from selene import browser
+# from selene.support.shared import browser #to remote only!
 from dotenv import load_dotenv #to remote only!
 import pytest
-from selene import browser, be, have
+
 from urllib import request
 
 # from webdriver_manager.core.os_manager import ChromeType
@@ -25,6 +25,7 @@ def browser_management():
     browser.config.browser_name = 'chrome'
     browser.config.window_width = 1280
     browser.config.window_height = 720
+    
     # browser.config.driver_options = driver_options
     # browser.config.hold_browser_open = True
     # driver_options.add_argument('--headless') #!

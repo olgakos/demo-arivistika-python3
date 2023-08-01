@@ -6,7 +6,7 @@ from models.courses_page import CoursePageMethods
 
 @allure.title('Оплата через Robokassa')
 @allure.tag('pay')
-@allure.severity(Severity.NORMAL)
+@allure.severity(Severity.CRITICAL)
 @allure.label('owner', 'Olga')
 @allure.feature(f'Проверка оплаты')
 @allure.story('Доступна оплата через Robokassa')
