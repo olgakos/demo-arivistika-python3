@@ -17,7 +17,7 @@ def test_course_pay_robokassa():
     course = CoursePageMethods()
 
     with allure.step("Открыть страницу курсов"):
-        browser.open('/cources-list')
+        browser.open('/cources-list/')
     with allure.step("Открыть страницу курса Декларирование"):
         course.check_title_dec('Курс PRO Декларирование')
     with allure.step("Нажать кнопку \"Подробнее\""):

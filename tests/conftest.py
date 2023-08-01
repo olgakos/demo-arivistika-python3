@@ -2,7 +2,8 @@ import os #to remote only!
 from selenium import webdriver #to remote only!
 from selenium.webdriver.chrome.options import Options #to remote only!
 from selene import Browser, Config #для локального запуска #to remote only!
-from selene.support.shared import browser #to remote only!
+# from selene.support.shared import browser #to remote only!
+from selene import browser
 from dotenv import load_dotenv #to remote only!
 import pytest
 from selene import browser, be, have
@@ -20,7 +21,7 @@ from utils import attach
 @pytest.fixture(scope="session", autouse=True)
 def browser_management():    
     browser.config.base_url = 'https://arivistika.ru'
-    browser.config.timeout = 3
+    browser.config.timeout = 10
     browser.config.browser_name = 'chrome'
     browser.config.window_width = 1280
     browser.config.window_height = 720
@@ -88,7 +89,7 @@ def setup_browser(request):
 
     # browser = Browser(Config(driver)) #ЛОКАЛЬНЫЙ запуск драйвера Хром
     browser.config.driver = driver  #УДАЛЕННЫЙ запуск драйвера Хром
-    browser.config.timeout = 5
+    browser.config.timeout = 10
     browser.config.base_url = 'https://arivistika.ru'
     browser.config.window_width = 1280
     browser.config.window_height = 1024
