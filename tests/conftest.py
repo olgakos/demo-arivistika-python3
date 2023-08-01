@@ -78,6 +78,8 @@ def setup_browser(request):
             "enableVideo": True #!
         }
 }
+    # options.addArguments("--disable-features=VizDisplayCompositor");
+
     options.capabilities.update(selenoid_capabilities)
     login = os.getenv('LOGIN')
     password = os.getenv('PASSWORD')
@@ -90,6 +92,7 @@ def setup_browser(request):
     # browser = Browser(Config(driver)) #ЛОКАЛЬНЫЙ запуск драйвера Хром
     browser.config.driver = driver  #УДАЛЕННЫЙ запуск драйвера Хром
     browser.config.timeout = 10
+    driver.get('https://arivistika.ru') #to loginpage test only!
     browser.config.base_url = 'https://arivistika.ru'
     browser.config.window_width = 1280
     browser.config.window_height = 1024
